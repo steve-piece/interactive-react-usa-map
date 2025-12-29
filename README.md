@@ -29,7 +29,7 @@ Fork this template and start customizing:
 
 Edit `lib/hover-card-config.ts` to configure which fields appear:
 
-\`\`\`typescript
+```typescript
 export interface HoverCardData {
   stateName: string
   stateCode: string
@@ -56,7 +56,7 @@ export const HOVER_CARD_FIELDS: HoverCardField[] = [
     maxItems: 3,
   },
 ]
-\`\`\`
+```
 
 **Field types:** `stat` (large number), `badges` (colored pills), `text`, `list`
 
@@ -64,7 +64,7 @@ export const HOVER_CARD_FIELDS: HoverCardField[] = [
 
 Edit `lib/data.ts` with your data:
 
-\`\`\`typescript
+```typescript
 export const STATE_DATA: Record<string, HoverCardData> = {
   CA: {
     stateName: "California",
@@ -75,13 +75,13 @@ export const STATE_DATA: Record<string, HoverCardData> = {
   },
   // ... more states
 }
-\`\`\`
+```
 
 ### 3. Map Colors
 
 Edit the `colors` object in `components/demo-map.tsx`:
 
-\`\`\`typescript
+```typescript
 const colors = useMemo(
   () => ({
     unselected: "#3d2a5c", // Default state color
@@ -90,30 +90,30 @@ const colors = useMemo(
   }),
   [],
 )
-\`\`\`
+```
 
 ### 4. Background Color
 
 Edit in `app/globals.css`:
 
-\`\`\`css
+```css
 body {
   background: linear-gradient(135deg, #1e1b2e 0%, #2d2244 50%, #1e1b2e 100%);
 }
-\`\`\`
+```
 
 ---
 
 ## File Structure
 
-\`\`\`
+```
 ├── components/
 │   ├── demo-map.tsx              # Main map component
 │   └── state-info-hover-card.tsx # Hover card component
 ├── lib/
 │   ├── data.ts                   # State data (customize this)
 │   └── hover-card-config.ts      # Hover card config
-\`\`\`
+```
 
 ---
 
